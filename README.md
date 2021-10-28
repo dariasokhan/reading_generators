@@ -9,7 +9,7 @@ The electron helicity is set manually currently -- adjust it according to how th
 FLAGS TO SET:
 * Whether you're running it on a ToyMC file (default is EpIC), whether the file has been put through the afterburner to add crossing-angles (default is no).
 * The debug flag lets everything that's been read in be printed to screen.
-* If you only want to read in a certain number of events, you can set the fag for this and specify the number.
+* If you only want to read in a certain number of events, you can set the flag for this and specify the number.
 
 The code has been set up for files where the quasi-real photon had its code manually changed to 3 (from 1) in EpIC files. Once there's a formal change in EpIC, update    */
 this feature.
