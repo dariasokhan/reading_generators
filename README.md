@@ -7,7 +7,7 @@ IMPORTANT:
 The electron helicity is set manually currently -- adjust it according to how the files are read in through the list. Assumes each file has a constant helicity.
 
 FLAGS TO SET:
-* Whether you're running it on a ToyMC file (default is EpIC), whether the file has been put through the afterburner to add crossing-angles (default is no).              */
+* Whether you're running it on a ToyMC file (default is EpIC), whether the file has been put through the afterburner to add crossing-angles (default is no).
 * The debug flag lets everything that's been read in be printed to screen.
 * If you only want to read in a certain number of events, you can set the fag for this and specify the number.
 
