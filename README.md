@@ -52,7 +52,8 @@ To run, make a list of all LUND files you want to read in, eg:
  ls *.dat > filelist.txt 
 
 Run through ROOT:   
-       root -l    
+        
+        root -l   
        [] .L split_lundfile.C
        [] split_lundfile((char*)"filelist.txt")
 
