@@ -11,8 +11,7 @@ FLAGS TO SET:
 * The debug flag lets everything that's been read in be printed to screen.
 * If you only want to read in a certain number of events, you can set the flag for this and specify the number.
 
-The code has been set up for files where the quasi-real photon had its code manually changed to 3 (from 1) in EpIC files. Once there's a formal change in EpIC, update    */
-this feature.
+The code has been set up for files where the quasi-real photon had its code manually changed to 3 (from 1) in EpIC files. Once there's a formal change in EpIC, update this feature.
 
 To run, make a list of all HEPMC files you want to read in, eg: 
 ls *.txt > filelist.txt
@@ -31,7 +30,6 @@ Daria Sokhan, Paris-Saclay, Oct 2021
 
 
 # split_lundfile
-
 
 
 Macro to read in a list of generated files for dvcs on proton and neutron in deuteron and write out two new sets of files which contain only dvcs on the proton or only on the neutron.
@@ -54,9 +52,9 @@ To run, make a list of all LUND files you want to read in, eg:
  ls *.dat > filelist.txt 
 
 Run through ROOT:   
-   root -l    
-   [] .L split_lundfile.C 
-   [] split_lundfile((char*)"filelist.txt")
+       root -l    
+       [] .L split_lundfile.C
+       [] split_lundfile((char*)"filelist.txt")
 
 You can also run without the (char*) above, but you'll get a harmless warning.
 
