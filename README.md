@@ -30,3 +30,35 @@ or, to suppress the char warning, do this instead:
 Daria Sokhan, Paris-Saclay, Oct 2021 
 
 
+# split_lundfile
+
+
+
+Macro to read in a list of generated files for dvcs on proton and neutron in deuteron and write out two new sets of files which contain only dvcs on the proton or only on the neutron.
+
+The output file names are hard-coded:
+
+        dvcsD_neut_N.dat                         
+        dvcsD_prot_N.dat                         
+                                                 
+where N is the number of the file. The files will get numbered from 0 in the order in which the input files are read in. For example, if you run this macro on two deuteron LUND files called: 
+ deut_764.dat and
+deut_825.dat, 
+in that order, the output will be: 
+ dvcsD_neut_0.dat and dvcs_prot_0.dat,
+both corresponding to deut_764.dat, and
+dvcsD_neut_1.dat and dvcs_prot_1.dat,
+both corresponding to deut_825.dat.
+
+To run, make a list of all LUND files you want to read in, eg: 
+ ls *.dat > filelist.txt 
+
+Run through ROOT:   
+   root -l    
+   [] .L split_lundfile.C 
+   [] split_lundfile((char*)"filelist.txt")
+
+You can also run without the (char*) above, but you'll get a harmless warning.
+
+Daria Sokhan, Saclay, Nov 2021 
+
