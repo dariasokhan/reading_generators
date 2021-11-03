@@ -44,6 +44,8 @@ TLorentzVector *spectator;
 TLorentzVector *recoil;
 TLorentzVector *photon1;
 TLorentzVector *photon2;
+int pid_recoil;
+int pid_spect;
 
 // Functions used by the macro:
 void set_up_objects(char*);
@@ -154,8 +156,11 @@ void process_file(char *filename){
 	}
 	
 	else if (ipar[p][0] == 2){
-          if (ipar[p][3] == 2112 || ipar[p][3] == 2212) spectator->SetPxPyPzE(dpar[p][0],dpar[p][1],dpar[p][2],dpar[p][3]);
-          else{
+          if (ipar[p][3] == 2112 || ipar[p][3] == 2212){
+	    spectator->SetPxPyPzE(dpar[p][0],dpar[p][1],dpar[p][2],dpar[p][3]);
+            pid_spect = ipar[p][3];
+	  }
+	  else{
 	    bad_event = 1;
 	    cout << "Odd-balls: second particle in event number " << lce << " isn't a nucleon. It's a " << ipar[p][3] << ". Humpf!" << endl;
 	  }
@@ -167,7 +172,10 @@ void process_file(char *filename){
 	    cout << "Oups, event " << lce << "has one specified target particle and another active nucleon!" << endl;
 	  }
 	  else {
-	    if (ipar[p][3] == 2212 || ipar[p][3] == 2112) recoil->SetPxPyPzE(dpar[p][0],dpar[p][1],dpar[p][2],dpar[p][3]);
+	    if (ipar[p][3] == 2212 || ipar[p][3] == 2112){
+	      recoil->SetPxPyPzE(dpar[p][0],dpar[p][1],dpar[p][2],dpar[p][3]);
+	      pid_recoil = ipar[p][3];
+	    }
 	    else{
 	      bad_event = 1;
 	      cout << "Odd-balls: third particle in event number " << lce << " isn't a nucleon. It's a " << ipar[p][3] << ". Humpf!"  << endl;
@@ -227,6 +235,8 @@ void set_up_objects(char *rootfilename){
   GenEvent->Branch("recoil","TLorentzVector",&recoil);
   GenEvent->Branch("photon1","TLorentzVector",&photon1);
   GenEvent->Branch("photon2","TLorentzVector",&photon2);
+  GenEvent->Branch("pid_recoil",&pid_recoil,"pid_recoil/I");
+  GenEvent->Branch("pid_spect",&pid_spect,"pid_spect/I");	
   
 }
 
