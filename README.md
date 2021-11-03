@@ -1,4 +1,4 @@
-# parsehepmc
+# parse_hepmc
 
 
 Macro to parse TCS HEPMC3 files, generated either with EpIC or with the ToyMC for TCS, and save all the generated particles as four-momenta in an output ROOT file, the name of which is chosen by the user.
@@ -61,3 +61,20 @@ You can also run without the (char*) above, but you'll get a harmless warning.
 
 Daria Sokhan, Saclay, Nov 2021 
 
+
+
+# root_from_lund
+
+Macro to read in a list of generated LUND files for dvmp pi0-production on proton or neutron in deuteron and write out a ROOT file with the four-momenta of all the particles, the beam energy and the cross-section per event. You pick the name of the output root file and pass it to the function. 
+
+Set up specifically for pi0 production on deuteron -- to use it for another channel will require edits to the code.
+
+Run through ROOT:   
+        
+        root -l   
+       [] .L root_from_lund.C
+       [] root_from_lund((char*)"filelist.txt",(char*)"outrootfile.root")
+
+You can also run without the (char*) above, but you'll get a harmless warning.
+
+Daria Sokhan, Saclay, Nov 2021 
