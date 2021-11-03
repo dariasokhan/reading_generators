@@ -65,7 +65,7 @@ Daria Sokhan, Saclay, Nov 2021
 
 # root_from_lund
 
-Macro to read in a list of generated LUND files for dvmp pi0-production on proton or neutron in deuteron and write out a ROOT file with the four-momenta of all the particles, the beam energy and the cross-section per event. You pick the name of the output root file and pass it to the function. 
+Macro to read in a list of generated LUND files for dvmp pi0-production on proton or neutron in deuteron and write out a ROOT file with the four-momenta of all the particles, the beam energy, the cross-section and the PID of the recoil and the spectator per event. You pick the name of the output root file and pass it to the function. 
 
 Set up specifically for pi0 production on deuteron -- to use it for another channel will require edits to the code.
 
