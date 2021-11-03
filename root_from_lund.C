@@ -1,25 +1,25 @@
-/*******************************************************/
-/*                                                     */
-/*   Macro to read in a list of generated files for    */
-/*   dvcs/dvmp on proton or neutron in deuteron and    */
-/*   write out a root file with the particle four-     */
-/*   momenta, the cross-section and the beam energy,   */
-/*                                                     */
-/*   To run, make a list of all LUND files             */
-/*   you want to read in, eg:                          */
-/*   ls *.dat > filelist.txt                           */
-/*                                                     */
-/*   Run through ROOT:                                 */
-/*     root -l                                         */
-/*     [] .L root_from_lund.C                          */
-/*     [] root_from_lund((char*)"filelist.txt")        */
-/*                                                     */
-/*   You can also run without the (char*) above,       */
-/*   but you'll get a harmless warning.                */
-/*                                                     */
-/*                                                     */
-/*   Daria Sokhan, Saclay, Nov 2021                    */
-/*******************************************************/
+/********************************************************************************/
+/*                                                                              */
+/*   Macro to read in a list of generated LUND files for dvmp on proton or      */
+/*   neutron in deuteron and write out a root file with the particle four-      */
+/*   momenta, the cross-section and the beam energy.                            */
+/*                                                                              */
+/*   To run, make a list of all LUND files you want to read in, eg:             */
+/*   ls *.dat > filelist.txt                                                    */
+/*                                                                              */
+/*   Run through ROOT:                                                          */
+/*     root -l                                                                  */
+/*     [] .L root_from_lund.C                                                   */
+/*     [] root_from_lund((char*)"filelist.txt",(char*)"outrootfile.root")       */
+/*                                                                              */
+/*   where outrootfile.root is the output file.                                 */
+/*                                                                              */
+/*   You can also run without the (char*) above, but you'll get a harmless.     */
+/*   warning.                                                                   */
+/*                                                                              */
+/*                                                                              */
+/*   Daria Sokhan, Saclay, Nov 2021                                             */
+/********************************************************************************/
 
  
 int ce = 0;        // event counter for "good" events
