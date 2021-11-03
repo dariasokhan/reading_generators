@@ -14,7 +14,7 @@
 /*                                                                              */
 /*   where outrootfile.root is the output file.                                 */
 /*                                                                              */
-/*   You can also run without the (char*) above, but you'll get a harmless.     */
+/*   You can also run without the (char*) above, but you'll get a harmless      */
 /*   warning.                                                                   */
 /*                                                                              */
 /*                                                                              */
