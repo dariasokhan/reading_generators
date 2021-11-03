@@ -1,7 +1,7 @@
 /********************************************************************************/
 /*                                                                              */
 /*   Macro to read in a list of generated LUND files for pi0 dvmp on proton or  */
-/*   neutron in deuteron and write out a root file with the particle four-      */
+/*   neutron in deuteron and write out a ROOT file with the particle four-      */
 /*   momenta, the cross-section and the beam energy.                            */
 /*                                                                              */
 /*   To run, make a list of all LUND files you want to read in, eg:             */
